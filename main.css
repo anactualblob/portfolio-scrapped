@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    font-family: 'Source sans pro'
+}
+
+body {
+    /*grid*/
+    display : grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 10px;
+
+    /*spacing and size*/
+    padding: 0px;
+    margin: 0px;
+
+    height: 100%
+}
+
+/*if window is less than 1200px wide*/
+@media (max-width: 1500px) {
+    body {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/************/
+/*LEFT PANEL*/
+/************/
+
+#left-panel {
+    /*grid*/
+    grid-column: 0;
+
+    /*Spacing and size*/
+    padding : 0px 0px;
+    height : 100%;
+
+    /*colors*/
+    background-color : #213254;
+    color: white;
+
+}
+
+/*PANEL CONTENT*/
+#panel-content {
+    /*Spacing and size*/
+    margin: 10% 0px;
+    padding: 30px 0px;
+}
+
+
+/*HEADER*/
+/*TODO : under 950px wide, the "game design" title collapses => collapse left panel under 950px*/
+header {
+    /*spacing and size*/
+    text-align: right;
+    margin: 0px 7% 0px 0px;
+    text-transform: uppercase;
+}
+header h1 {
+    /*spacing and size*/
+    font-size: 55px;
+    margin: 15px 0px 10px auto;
+    width: 96%;
+}
+header h2 {
+    /*spacing and size*/
+    font-size: 45px;
+    margin: 15px 0px 10px auto;
+    width: 96%;
+}
+
+
+/*NAV SIDEBAR*/
+#nav-main {
+    /*spacing and size*/
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 25%;
+    padding: 10px 0px;
+
+    /*colors*/
+    background-color: #5E78AB;
+
+}
+
+.nav-item {
+    font-size: 35px;
+    margin: 20px 0px 20px 5%;
+
+    
+}
+
+
+.nav-subitem {
+    font-size: 23px;
+    margin: 10px 0px 10px 10%;
+
+}
+#nav-projects-sub {
+    /*spacing and size*/
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+/***********/
+/*MAIN BODY*/
+/***********/
+
+#main {
+    /*grid*/
+    grid-column: 0;
+}
