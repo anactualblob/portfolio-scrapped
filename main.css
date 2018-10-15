@@ -78,31 +78,42 @@ header h2 {
     width: 100%;
     margin: 0px auto;
     margin-top: 25%;
-    padding: 10px 0px;
+    padding: 0px 0px;
 
     /*colors*/
     background-color: #5E78AB;
 
 }
 
+/*NAV TOP LEVEL ITEMS*/
 .nav-item {
+    padding: 20px 0px 20px 5%;
+}
+.nav-item-text {
     font-size: 35px;
-    margin: 20px 0px 20px 5%;
-
-    
+    margin: 0px;
+     
 }
 
 
-.nav-subitem {
-    font-size: 23px;
-    margin: 10px 0px 10px 10%;
-
+.nav-current {
+    background-color: rgb(60, 79, 117)
 }
+
+
+
+/*NAV SUBITEMS*/
 #nav-projects-sub {
     /*spacing and size*/
     display: block;
     margin: 0px;
     padding: 0px;
+}
+
+.nav-subitem-text {
+    font-size: 23px;
+    margin: 10px 0px 10px 10%;
+
 }
 
 
