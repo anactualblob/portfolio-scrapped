@@ -85,6 +85,7 @@ header h2 {
 
 }
 
+
 /*NAV TOP LEVEL ITEMS*/
 .nav-item {
     padding: 20px 0px 20px 5%;
@@ -94,8 +95,6 @@ header h2 {
     margin: 0px;
      
 }
-
-
 .nav-current {
     background-color: rgb(60, 79, 117)
 }
@@ -112,8 +111,12 @@ header h2 {
 
 .nav-subitem-text {
     font-size: 23px;
-    margin: 10px 0px 10px 10%;
+    padding: 10px 0px 10px 10%;
+    margin: 0px;
+}
 
+.nav-selected {
+    /*background-color : #FF530D;*/
 }
 
 
