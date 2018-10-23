@@ -21,7 +21,35 @@ body {
     body {
         grid-template-columns: 1fr 2fr;
     }
+
+    @media(max-width: 1000px) {
+        body {
+            background-color: black;
+        }
+        
+    }
 }
+
+
+
+/*PANEL TOGGLE BUTTON*/
+#panel-toggle {
+    /*Size & spacing*/
+    position : absolute;
+    left : 0px;
+    margin : 10px;
+    padding : 0px;
+
+    border: none;
+    background: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+  
+  
+
 
 
 /************/
@@ -35,6 +63,7 @@ body {
     /*Spacing and size*/
     padding : 0px 0px;
     height : 100vh;
+    display:block;
 
     /*colors*/
     background-color : #213254;
@@ -47,6 +76,8 @@ body {
     */
     
 }
+
+
 
 /*PANEL CONTENT*/
 #panel-content {
@@ -116,6 +147,10 @@ header h2 {
     padding: 0px;
 }
 
+.nav-subitem {
+    display: none;
+}
+
 .nav-subitem-text {
     font-size: 23px;
     padding: 10px 0px 10px 10%;
@@ -131,33 +166,3 @@ header h2 {
 
 
 
-/***********/
-/*MAIN BODY*/
-/***********/
-
-main {
-    /*grid*/
-    /*grid-column: 0;*/
-    
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#project-view {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    justify-content: space-around;
-
-}
-
-.flexbox-test {
-    width : 400px;
-    height: 250px;
-
-    margin : 20px;
-
-    background-color: lightgrey;
-
-}

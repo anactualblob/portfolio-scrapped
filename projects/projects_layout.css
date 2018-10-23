@@ -31,3 +31,7 @@ main {
     background-color: lightgrey;
 
 }
+
+#nav-projects-sub .nav-subitem {
+    display: block;
+}
