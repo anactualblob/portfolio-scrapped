@@ -1,3 +1,7 @@
+:root {
+    --sidebar-width: 500px;
+}
+
 html {
     height: 100%;
     font-family: 'Source sans pro'
@@ -5,9 +9,9 @@ html {
 
 body {
     /*grid*/
-    display : grid;
+    /*display : grid;
     grid-template-columns: 500px 1fr;
-    grid-gap: 10px;
+    grid-gap: 10px;*/
     
 
     /*spacing and size*/
@@ -17,30 +21,7 @@ body {
     height: 100%
 }
 
-/*if window is less than 1200px wide*/
-@media (max-width: 1500px) {
-    body {
-        grid-template-columns: 1fr 2fr;
-    }
 
-    /*if window is less than 1000px wide*/
-    @media(max-width: 1000px) {
-        
-
-        body {
-            /*grid-template-columns : 0px 1fr;*/
-        }
-
-        #left-panel {
-        }
-
-        #panel-toggle {
-        }
-
-
-        
-    }
-}
 
 
 
@@ -52,7 +33,8 @@ body {
     margin : 10px;
     padding : 0px;
 
-    visibility : hidden;
+    display: none;
+    z-index: 2;
     border: none;
     background: none;
 }
@@ -74,15 +56,24 @@ button::-moz-focus-inner {
     /*grid-column: 0;*/
 
     /*Spacing and size*/
+    width: var(--sidebar-width);
     padding : 0px 0px;
-    height : 100vh;
+    height : 100%;
     display:block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index : 1;
 
     /*colors*/
     background-color : #213254;
     color: white;
 
-    
+    /*animation*/
+    transition: 0.25s;
+
     /*
     top: 0;
     box-sizing: border-box;
@@ -176,6 +167,65 @@ header h2 {
 
 
 
+/**********/
+/*  MAIN  */
+/**********/
+
+
+main {
+    margin-left: var(--sidebar-width);
+}
 
 
 
+
+
+
+
+
+
+
+/***********/
+/*  MEDIA  */
+/***********/
+
+/*if window is less than 1500px wide*/
+@media (max-width: 1500px) {
+    :root {
+        --sidebar-width: 33%;
+    }   
+    
+    /*if window is less than 1100px wide*/
+    @media(max-width: 1100px) { 
+        :root {
+            --sidebar-width: 50%;
+        }
+        @media (max-width : 700px) {
+            :root {--sidebar-width: 100%;}
+        }
+
+        main {
+            margin-left: 0px;
+        }
+
+        #panel-toggle {
+            display: block;
+        }
+
+
+        #left-panel {
+            width: 0px;
+            position : absolute;
+        }
+
+    }
+
+}
+
+@media (min-width: 1101px) {
+    #left-panel {
+        width: var(--sidebar-width) !important;
+    }
+
+
+}
