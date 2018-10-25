@@ -2,32 +2,4 @@
 /*MAIN BODY*/
 /***********/
 
-main {
-    /*grid*/
-    /*grid-column: 0;*/
-    
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
 
-#project-view {
-    /*flex*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    /*size and spacing*/
-    width : 90%;
-    margin :auto;
-
-}
-
-.flexbox-test {
-    width : 400px;
-    height: 225px;
-
-
-    background-color: lightgrey;
-
-}

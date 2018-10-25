@@ -4,8 +4,12 @@ function toggleSidebar() {
     panel.style.width = panel.style.width == "var(--sidebar-width)" ? "0px" : "var(--sidebar-width)";
 }
 
-function clearStyle(id) {
-    e = document.getElementById(id);
+function clearStyle() {
+    e = document.getElementById("left-panel");
 
     e.removeAttribute("style");
 }
+
+
+let q = window.matchMedia("(max-width: 1100px)");
+q.addListener(clearStyle);

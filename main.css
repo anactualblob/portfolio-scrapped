@@ -8,10 +8,6 @@ html {
 }
 
 body {
-    /*grid*/
-    /*display : grid;
-    grid-template-columns: 500px 1fr;
-    grid-gap: 10px;*/
     
 
     /*spacing and size*/
@@ -39,6 +35,10 @@ body {
     background: none;
 }
 
+#panel-toggle:hover {
+    cursor: pointer;
+}
+
 button::-moz-focus-inner {
     border: 0;
 }
@@ -52,8 +52,6 @@ button::-moz-focus-inner {
 /************/
 
 #left-panel {
-    /*grid*/
-    /*grid-column: 0;*/
 
     /*Spacing and size*/
     width: var(--sidebar-width);
@@ -118,7 +116,7 @@ header h2 {
     /*spacing and size*/
     width: 100%;
     margin: 0px auto;
-    margin-top: 25%;
+    margin-top:15%;
     padding: 0px 0px;
     
 
@@ -126,6 +124,11 @@ header h2 {
     background-color: #5E78AB;
 
 }
+#nav-main a {
+    color: white;
+    text-decoration: none;
+}
+
 
 
 /*NAV TOP LEVEL ITEMS*/
@@ -162,7 +165,6 @@ header h2 {
 }
 
 .nav-selected {
-    /*background-color : #FF530D;*/
 }
 
 
@@ -174,8 +176,10 @@ header h2 {
 
 main {
     margin-left: var(--sidebar-width);
+    
+    overflow-y: auto;
+    overflow-x: auto;
 }
-
 
 
 

@@ -7,36 +7,39 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" type="text/css" href="projects_layout.css">
+    <script src="../scripts/main.js"></script>
 </head>
 
-<body>
-    <a href=# id="panel-toggle">
+<body id="body">
+    <button onclick="toggleSidebar()" id="panel-toggle">
         <img src="https://via.placeholder.com/64x64"/>
-    </a>
+    </button>
     <div id="left-panel">
         
         <div id="panel-content">
             <header>
-                <h1>Lucas Martinez</h1>
+                <h1>Lucas<br/>Martinez</h1>
                 <h2>Game Design</h2>
             </header>
 
             <nav id="nav-main">
-                <div id="nav-home" class="nav-item">
+                <a href=../index.html><div id="nav-home" class="nav-item">
                     <p class="nav-item-text">
                         Home
                     </p>
-                </div>
-                <div id="nav-projects" class="nav-item nav-current">
+                </div></a>
+                <a href=#><div id="nav-projects" class="nav-item nav-current">
                     <p class="nav-item-text">
                         Works
                     </p>
                     <div id="nav-projects-sub">
+                        <a href=##>
                         <div  class="nav-subitem">
                             <p class="nav-subitem-text">
                                 Highlights
                             </p>
                         </div>
+                        </a>
                         <div  class="nav-subitem">
                             <p class="nav-subitem-text">
                                 Personnal
@@ -53,7 +56,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div></a>
 
                 <div id="nav-exp" class="nav-item">
                     <p class="nav-item-text">
@@ -73,25 +76,12 @@
 
 
 
-    <main>
+    <main id="main">
         <h1 class="page-title">
-            Works
+            Home
         </h1>
 
-        <div id="project-view">
-            <div class="flexbox-test">1</div>
-            <div class="flexbox-test">2</div>
-            <div class="flexbox-test">3</div>
-            <div class="flexbox-test">4</div>
-            <div class="flexbox-test">5</div>
-            <div class="flexbox-test">6</div>
-            <div class="flexbox-test">7</div>
-            <div class="flexbox-test">8</div>
-            <div class="flexbox-test">9</div>
-            <div class="flexbox-test">10</div>
-            <div class="flexbox-test">11</div>
-            <div class="flexbox-test">12</div>
-            <div class="flexbox-test">13</div>
+        <div id="main-view">
         </div>
 
 
