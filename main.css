@@ -21,27 +21,7 @@ body {
 
 
 
-/*PANEL TOGGLE BUTTON*/
-#panel-toggle {
-    /*Size & spacing*/
-    position : absolute;
-    left : 0px;
-    margin : 10px;
-    padding : 0px;
 
-    display: none;
-    z-index: 2;
-    border: none;
-    background: none;
-}
-
-#panel-toggle:hover {
-    cursor: pointer;
-}
-
-button::-moz-focus-inner {
-    border: 0;
-}
   
   
 
@@ -60,8 +40,6 @@ button::-moz-focus-inner {
     display:block;
 
     position: fixed;
-    top: 0;
-    left: 0;
 
     z-index : 1;
 
@@ -72,20 +50,41 @@ button::-moz-focus-inner {
     /*animation*/
     transition: 0.25s;
 
-    /*
-    top: 0;
-    box-sizing: border-box;
-    */
+    --text-display: block;
     
 }
+
+
+/*PANEL TOGGLE BUTTON*/
+#panel-toggle {
+    /*Size & spacing*/
+    position : fixed;
+    left : 0px;
+    margin : 10px;
+    padding : 0px;
+
+    display: none;
+    z-index: 2;
+    border: none;
+    background: none;
+}
+
+#panel-toggle:hover {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
 
 
 
 /*PANEL CONTENT*/
 #panel-content {
     /*Spacing and size*/
-    margin: 10% 0px;
-    padding: 30px 0px;
+    margin: 5% 0px 0px;
+    padding: 30px 0px 0px;
 }
 
 
@@ -99,15 +98,17 @@ header {
 }
 header h1 {
     /*spacing and size*/
-    font-size: 55px;
-    margin: 15px 0px 10px auto;
+    font-size: 6vh;
+    margin: 10px 0px 10px auto;
     width: 96%;
+    display: var(--text-display);
 }
 header h2 {
     /*spacing and size*/
-    font-size: 45px;
+    font-size: 4vh;
     margin: 15px 0px 10px auto;
     width: 96%;
+    display: var(--text-display);
 }
 
 
@@ -116,7 +117,7 @@ header h2 {
     /*spacing and size*/
     width: 100%;
     margin: 0px auto;
-    margin-top:15%;
+    margin-top:10%;
     padding: 0px 0px;
     
 
@@ -133,10 +134,10 @@ header h2 {
 
 /*NAV TOP LEVEL ITEMS*/
 .nav-item {
-    padding: 20px 0px 20px 5%;
+    padding: 2% 0px 2% 5%;
 }
 .nav-item-text {
-    font-size: 35px;
+    font-size: 3vh;
     margin: 0px;
      
 }
@@ -159,15 +160,17 @@ header h2 {
 }
 
 .nav-subitem-text {
-    font-size: 23px;
-    padding: 10px 0px 10px 10%;
+    font-size: 2vh;
+    padding: 1% 0px 1% 10%;
     margin: 0px;
 }
 
 .nav-selected {
 }
 
-
+nav p {
+    display: var(--text-display);
+}
 
 /**********/
 /*  MAIN  */
@@ -177,11 +180,15 @@ header h2 {
 main {
     margin-left: var(--sidebar-width);
     
-    overflow-y: auto;
+    overflow-y: hidden;
     overflow-x: auto;
 }
 
-
+#page-title {
+    /*Text*/
+    text-align: center;
+    font-size: 4vmax
+}
 
 
 
@@ -219,13 +226,15 @@ main {
 
         #left-panel {
             width: 0px;
-            position : absolute;
+            position : fixed;
+            --text-display: none;
         }
 
     }
 
 }
 
+/* Un-collapse sidebar when greater than 1100px wide*/
 @media (min-width: 1101px) {
     #left-panel {
         width: var(--sidebar-width) !important;
