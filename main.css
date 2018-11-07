@@ -125,16 +125,21 @@ header h2 {
     background-color: #5E78AB;
 
 }
+
 #nav-main a {
     color: white;
     text-decoration: none;
 }
 
 
-
 /*NAV TOP LEVEL ITEMS*/
 .nav-item {
     padding: 2% 0px 2% 5%;
+    transition: background 0.1s linear;
+}
+
+.nav-item:hover {
+    background-color:rgb(60, 79, 117);
 }
 .nav-item-text {
     font-size: 3vh;
@@ -142,7 +147,7 @@ header h2 {
      
 }
 .nav-current {
-    background-color: rgb(60, 79, 117)
+    background-color: rgb(60, 79, 117);
 }
 
 
@@ -157,6 +162,10 @@ header h2 {
 
 .nav-subitem {
     display: none;
+    transition: background 0.1s linear;
+}
+.nav-subitem:hover {
+    background-color:  #213254;
 }
 
 .nav-subitem-text {
@@ -165,7 +174,8 @@ header h2 {
     margin: 0px;
 }
 
-.nav-selected {
+.nav-subcurrent {
+    background-color:  #213254;
 }
 
 nav p {
@@ -189,9 +199,6 @@ main {
     text-align: center;
     font-size: 4vmax
 }
-
-
-
 
 
 
