@@ -1,4 +1,4 @@
-//function called on 
+//function called on button press
 function toggleSidebar() {
     panel = document.getElementById("left-panel");
     
@@ -24,7 +24,6 @@ function clearStyle() {
 
     e.removeAttribute("style");
 }
-
 
 let q = window.matchMedia("(max-width: 1100px)");
 q.addListener(clearStyle);
