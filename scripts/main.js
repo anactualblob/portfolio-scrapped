@@ -18,6 +18,7 @@ function toggleSidebar() {
 
 
 
+
 //clearing HTML style attributes on sidebar when window is big enough
 function clearStyle() {
     e = document.getElementById("left-panel");

@@ -55,3 +55,19 @@
     bottom : 0px;
 }
 
+
+
+
+
+
+
+.home-post {
+    height: 200px;
+    width : 90%;
+
+    border: 1px solid black;
+    background : white;
+
+    margin : 15px auto ;
+}
+
