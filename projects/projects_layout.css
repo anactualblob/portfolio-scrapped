@@ -1,9 +1,19 @@
 /***********/
+/* SIDEBAR */
+/***********/
+
+#nav-projects-sub .nav-subitem {
+    display: block;
+}
+
+
+
+
+/***********/
 /*MAIN BODY*/
 /***********/
 
-
-#projects {
+#posts-view {
     /*flex*/
     display: flex;
     flex-direction: row;
@@ -17,15 +27,16 @@
 }
 
 .flexbox-test {
-    width : 400px;
-    height: 300px;
+    width : 320px;
+    height : 250px;
+
+    max-width : 500px;
 
     flex: 1 1 auto;
 
-
-
-    background-color: lightgrey;
     border: 1px solid black;
+    background : white;
+    
 }
 
 #nav-projects-sub .nav-subitem {
