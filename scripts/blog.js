@@ -9,19 +9,18 @@ let header = "h2";
 
 (async function blogSetup() {
     posts = await getPosts();
-    //displayByTag(["testtag1"]);
+    displayByTag(["testtag1"]);
+    console.log("mdr")
 })();
 
 
 async function getPosts() {
     let list = await fetch("../posts/_list.json").then( r => r.json());
     let ret={};
-    for (let i = 0; i < list.body.length; i++) {
+    for (let i = 0; i < list.meta.length; i++) {
         let postname = "post" + i;
-        ret[postname] = {};
 
-        ret[postname].text = await fetch("../posts/" + list.body[i]).then(r => r.text());
-        ret[postname].meta = await fetch("../posts/" + list.meta[i]).then(r => r.json());
+        ret[postname] = await fetch("../posts/" + list.meta[i]).then(r => r.json());
     }
 
     console.log("retrieved posts");
@@ -36,8 +35,8 @@ async function getPosts() {
 // MUST GIVE AN ARRAY OF TAGS
 function checkTags(post, tag_arr) {
     for (let i = 0; i < tag_arr.length; i++) {
-        for (let j = 0; j < post.meta.tags.length; ) {
-            if (tag_arr[i] == post.meta.tags[j]) {
+        for (let j = 0; j < post.tags.length; ) {
+            if (tag_arr[i] == post.tags[j]) {
                 return true;
             }
         }
@@ -57,7 +56,7 @@ function displayByTag (tag_arr) {
     }
 
     for (let i = 0; i< render.length; i++) {
-        str = generateHTML(render[i]);
+        str = generateCard(render[i]);
         target = document.getElementById ("posts-view");
         target.innerHTML = str;
 
@@ -68,18 +67,21 @@ function displayByTag (tag_arr) {
 
 // Generates HTML for a post card to be added to the page
 // TODO : add a link ot go to the article page
-function generateHTML(post) {
+function generateCard(post) {
     let title = "";
     let desc = "";
     let img = "";
 
-    title = "<"+header+" class='post-meta-title'>" + post.meta.title + "</"+header+">";
-    desc = "<p class='post-meta-desc'>" + post.meta.desc + "</p>";
-    img = "<img src='" + post.meta.image + "' class='post-meta-img' />";
+    //TODO : display category on HTML element
+    let cat = "";
+
+    title = "<"+header+" class='post-meta-title'>" + post.title + "</"+header+">";
+    desc = "<p class='post-meta-desc'>" + post.desc + "</p>";
+    img = "<img src='" + post.image + "' class='post-meta-img' />";
 
     element = 
         "<div class='post-meta'>" +
-            "<a href='../posts/posts.html' class='post-meta-link'>" +
+            "<a href='../posts/_post.html' class='post-meta-link'>" +
             title + "\n" + 
             desc + "\n" + 
             img + "\n" +
