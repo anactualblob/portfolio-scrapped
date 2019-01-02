@@ -11,71 +11,13 @@
     <script src="./scripts/main.js"></script>
 </head>
 
-<body id="body">
+<body id="body" class="home">
     <button onclick="toggleSidebar()" id="panel-toggle">
         <img src="https://via.placeholder.com/64x64"/>
     </button>
-    <div id="left-panel">
-        
-        <div id="panel-content">
-            <header>
-                <h1>Lucas<br/>Martinez</h1>
-                <h2>Game Design</h2>
-            </header>
-
-            <nav id="nav-main">
-                <a href=#><div id="nav-home" class="nav-item nav-current">
-                    <p class="nav-item-text">
-                        Home
-                    </p>
-                </div></a>
-                <a href="./projects/projects.html"><div id="nav-projects" class="nav-item">
-                    <p class="nav-item-text">
-                        Works
-                    </p>
-                    <div id="nav-projects-sub">
-                        <a href=##>
-                        <div  class="nav-subitem">
-                            <p class="nav-subitem-text">
-                                Highlights
-                            </p>
-                        </div>
-                        </a>
-                        <div  class="nav-subitem">
-                            <p class="nav-subitem-text">
-                                Personnal
-                            </p>
-                        </div>
-                        <div  class="nav-subitem">
-                            <p class="nav-subitem-text">
-                                Professionnal
-                            </p>
-                        </div>
-                        <div  class="nav-subitem">
-                            <p class="nav-subitem-text">
-                                Student
-                            </p>
-                        </div>
-                    </div>
-                </div></a>
-
-                <div id="nav-exp" class="nav-item">
-                    <p class="nav-item-text">
-                        Experiences
-                    </p>
-                </div>
-
-                <div id="nav-contact" class="nav-item">
-                    <p class="nav-item-text">
-                        Blog
-                    </p>
-                </div>
-            </nav>
-        </div>
-
-    </div>
-
-
+    <?php
+        include("sidebar.php");
+    ?>
 
     <main id="main">
         <h1 id="page-title">

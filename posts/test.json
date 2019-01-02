@@ -1,6 +1,8 @@
 {
     "name" : "test.md",
-    "title" : "This Is A Test, And A Good One At That",
+    "short_title" : "test-and-good-one",
+    "long_title" : "This Is A Test, And A Good One At That",
+    "category" : "blog",
     "tags" : [
         "testtag1",
         "testtag2"

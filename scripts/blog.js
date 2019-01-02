@@ -10,7 +10,6 @@ let header = "h2";
 (async function blogSetup() {
     posts = await getPosts();
     displayByTag(["testtag1"]);
-    console.log("mdr")
 })();
 
 

@@ -94,7 +94,6 @@ button:focus {
 
 
 /*HEADER*/
-/*TODO : under 950px wide, the "game design" title collapses => collapse left panel under 950px*/
 header {
     /*spacing and size*/
     text-align: right;
@@ -122,7 +121,7 @@ header h2 {
     /*spacing and size*/
     width: 100%;
     margin: 0px auto;
-    margin-top:10%;
+    margin-top: 10%;
     padding: 0px 0px;
     
 
@@ -151,10 +150,29 @@ header h2 {
     margin: 0px;
      
 }
-.nav-current {
+
+
+.nav-top-link {
+   
+    /* TODO : find a way to make the whole title clickable */
+
+}
+
+
+
+
+
+.home #nav-home {
     background-color: rgb(60, 79, 117);
 }
 
+.projects #nav-projects {
+    background-color: rgb(60, 79, 117);
+}
+
+.blog #nav-blog {
+    background-color: rgb(60, 79, 117);
+}
 
 
 /*NAV SUBITEMS*/
@@ -176,7 +194,9 @@ header h2 {
 .nav-subitem-text {
     font-size: 2vh;
     padding: 1% 0px 1% 10%;
-    margin: 0px;
+    margin : 0px;
+
+    margin-top : 3px;
 }
 
 .nav-subcurrent {
