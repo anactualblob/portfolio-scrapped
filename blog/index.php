@@ -30,7 +30,11 @@
         <?php
             include("../scripts/blogEngine.php");
             $category = $_GET["cat"];
-            echo getPosts($category, JSON_UNESCAPED_SLASHES);
+            $list = getPosts($category, JSON_UNESCAPED_SLASHES);
+            
+            foreach ($list as $i) {
+                echo generateHTML($i);
+            }
         ?>
 
         </div>

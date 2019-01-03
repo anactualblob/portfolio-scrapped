@@ -18,13 +18,14 @@
     
     <?php 
         include("../sidebar.php");
+        $post = $_GET["id"];
     ?>
 
 
 
     <main id="main">
         <h1 id="page-title">
-            Post_Title
+            Post_title
         </h1>
 
         <div id="main-view">

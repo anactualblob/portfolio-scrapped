@@ -8,7 +8,7 @@
 
             <nav id="nav-main">
 
-                <a href="/index.php"><div id="nav-home" class="nav-item">
+                <a href="/"><div id="nav-home" class="nav-item">
                     <p class="nav-item-text">
                         Home
                     </p>
@@ -36,7 +36,7 @@
                         <a href="/projects/?cat=pers">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
-                                    Personnal
+                                    Personal
                                 </p>
                             </div>
                         </a>
@@ -44,7 +44,7 @@
                         <a href="/projects/?cat=pro">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
-                                    Professionnal
+                                    Professional
                                 </p>
                             </div>
                         </a>
