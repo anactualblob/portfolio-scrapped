@@ -17,14 +17,14 @@
 
                 
                 <div id="nav-projects" class="nav-item">
-                    <a href="/projects.php" class="nav-top-link">
+                    <a href="/projects/?cat=all" class="nav-top-link">
                         <p class="nav-item-text">
                             Works
                         </p>
                     </a>
 
                     <div id="nav-projects-sub">
-                        <a href=##>
+                        <a href="/projects/?cat=all">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     All Projects
@@ -33,7 +33,7 @@
                         </a>
 
                         
-                        <a href=##>
+                        <a href="/projects/?cat=pers">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Personnal
@@ -41,7 +41,7 @@
                             </div>
                         </a>
 
-                        <a href=##>
+                        <a href="/projects/?cat=pro">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Professionnal
@@ -49,7 +49,7 @@
                             </div>
                         </a>
                         
-                        <a href=##>
+                        <a href="/projects/?cat=stud">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Student
@@ -61,7 +61,7 @@
                 
 
 
-               <div id="nav-exp" class="nav-item">
+                <div id="nav-exp" class="nav-item">
                     <p class="nav-item-text">
                         Experiences
                     </p>
@@ -70,14 +70,14 @@
                 
                 
                 <div id="nav-blog" class="nav-item">
-                    <a href="/blog.php" class="nav-top-link">
+                    <a href="/blog/?cat=all" class="nav-top-link">
                         <p class="nav-item-text">
                             Blog
                         </p>
                     </a>
 
                     <div id="nav-blog-sub">
-                        <a href=##>
+                        <a href="/blog/?cat=all">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     All Posts
@@ -86,7 +86,7 @@
                         </a>
 
                         
-                        <a href=##>
+                        <a href="/blog/?cat=diaries">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Play Diaries
@@ -94,7 +94,7 @@
                             </div>
                         </a>
 
-                        <a href=##>
+                        <a href="/blog/?cat=articles">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Articles
@@ -102,7 +102,7 @@
                             </div>
                         </a>
                         
-                        <a href=##>
+                        <a href="/blog/?cat=devlogs">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
                                     Dev Logs

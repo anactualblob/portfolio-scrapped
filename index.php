@@ -6,7 +6,7 @@
     <title>Lucas Martinez - Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="index_layout.css">
+    <link rel="stylesheet" type="text/css" href="home_layout.css">
     <script src="./scripts/lib/remarkable.min.js"></script>
     <script src="./scripts/main.js"></script>
 </head>

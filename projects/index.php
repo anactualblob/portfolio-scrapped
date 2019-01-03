@@ -5,12 +5,10 @@
     <meta charset="utf-8"/>
     <title>Lucas Martinez - Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="./main.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" type="text/css" href="./projects_layout.css">
     <script src="../scripts/lib/remarkable.min.js"></script>
-    <!-- <script src="../scripts/blog.js"></script> -->
     <script src="../scripts/main.js"></script>
-    <?php $root = "../" ?>
 </head>
 
 <body id="body" class="projects">
@@ -19,7 +17,7 @@
     </button>
 
     <?php
-        include("./sidebar.php");
+        include("../sidebar.php");
     ?>
 
 
