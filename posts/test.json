@@ -1,7 +1,7 @@
 {
-    "name" : "test.md",
-    "short_title" : "test-and-good-one",
-    "long_title" : "This Is A Test, And A Good One At That",
+    "file" : "test.md",
+    "id" : "test-and-good-one",
+    "title" : "This Is A Test, And A Good One At That",
     "type" : "blog",
     "category" : "articles",
     "image" : "https://via.placeholder.com/150",

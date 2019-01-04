@@ -1,7 +1,7 @@
 {
-    "name" : "test - Copie.md",
-    "short_title" : "another-test-enjoy",
-    "long_title" : "This Is Another Test, Enjoy",
+    "file" : "test - Copie.md",
+    "id" : "another-test-enjoy",
+    "title" : "This Is Another Test, Enjoy",
     "type" : "blog",
     "category" : "diaries",
     "image" : "https://via.placeholder.com/150x150",

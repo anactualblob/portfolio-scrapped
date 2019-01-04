@@ -1,6 +1,6 @@
 # hey
 > Comment ça va
-## ceci est un test
+## ceci est un autre test
 
 j'aime *bien* **les** ***tests***.
 
@@ -13,4 +13,4 @@ j'aime *bien* **les** ***tests***.
 ---
 
 ![image here](https://via.placeholder.com/150)  
-[clique sur ce lien wsh](www.duckduckgo.com)
+[clique sur ce lien wsh](https://www.duckduckgo.com)

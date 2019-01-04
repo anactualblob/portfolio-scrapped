@@ -44,10 +44,11 @@ function generateHTML($post) {
 
     $html = "";
 
-    $title = $post["long_title"];
+
+    $title = $post["title"];
     $desc = $post["desc"];
-    $img = $post["img"];
-    $posturl = $post["short_title"];
+    $img = $post["image"];
+    $postid = $post["id"];
     $category = "";
     switch ($post["category"]) {
         case "articles":
@@ -61,19 +62,38 @@ function generateHTML($post) {
             break;
     }
 
-    $html = "<a href='../posts/?id=$posturl' class='post-card-link'> \n
-                <div class='post-card'> \n
-                    <img class='post-card-img' src=$img />\n
-                    <h2 class='post-card-title'>$title</h2>\n
-                    <p class='post-card-category'>$category</p>\n
-                    <p class='post-card-desc'>$desc</p>\n
-                </div> \n
-            </a>";
+    $html ="<a href='../posts/?id=$postid' class='post-card-link'>
+                <div class='post-card'>
+                    <img class='post-card-img' src=$img />
+                    <h2 class='post-card-title'>$title</h2>
+                    <p class='post-card-category'>$category</p>
+                    <p class='post-card-desc'>$desc</p>
+                </div>
+            </a>\n";
 
     return $html;
 
 
 }
 
+
+// given an array of post metas and a post id, return path to markdown file of corresponding post
+function getPostFromID ($posts, $id) {
+    $filename = "";
+    foreach ($posts as $post) {
+        if ($post["id"] == $id) {
+            return $post;
+            break;
+        } 
+    }   
+
+}
+
+
+// given a post meta, returns content of associated .md post file
+function getMD ($post) {
+    $md = file_get_contents("../posts\/". $post['file'] );
+    return json_encode($md);
+}
 
 ?>

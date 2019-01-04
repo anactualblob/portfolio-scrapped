@@ -18,19 +18,27 @@
     
     <?php 
         include("../sidebar.php");
-        $post = $_GET["id"];
+        include("../scripts/blogEngine.php");
+        $postID = $_GET["id"];
     ?>
 
 
 
     <main id="main">
         <h1 id="page-title">
-            Post_title
+            <?php
+                $post = getPostFromID( getPosts("all"), $postID);
+                echo $post["title"];
+            ?>
+            
         </h1>
 
         <div id="main-view">
-            
-            
+            <script>
+                let md = new Remarkable();
+                document.getElementById("main-view").insertAdjacentHTML("beforeend", md.render(<?= getMD($post) ?>));
+            </script>
+
         </div>
 
 

@@ -13,4 +13,4 @@ j'aime *bien* **les** ***tests***.
 ---
 
 ![image here](https://via.placeholder.com/150)  
-[clique sur ce lien wsh](www.duckduckgo.com)
+[clique sur ce lien wsh](https://www.duckduckgo.com)
