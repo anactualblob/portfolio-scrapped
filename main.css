@@ -233,17 +233,17 @@ main {
 /***********/
 
 /*if window is less than 1500px wide*/
-@media (max-width: 1500px) {
+@media (max-aspect-ratio: 1500/1080) {
     :root {
         --sidebar-width: 33%;
     }   
     
     /*if window is less than 1100px wide*/
-    @media(max-width: 1100px) { 
+    @media(max-aspect-ratio: 1100/1080) { 
         :root {
             --sidebar-width: 50%;
         }
-        @media (max-width : 700px) {
+        @media (max-aspect-ratio : 700/1080) {
             :root {--sidebar-width: 100%;}
         }
 
@@ -267,7 +267,7 @@ main {
 }
 
 /* Un-collapse sidebar when greater than 1100px wide*/
-@media (min-width: 1101px) {
+@media (min-aspect-ratio: 1101/1080) {
     #left-panel {
         width: var(--sidebar-width) !important;
     }

@@ -11,7 +11,7 @@
     <script src="../scripts/main.js"></script>
 </head>
 
-<body id="body">
+<body id="body" class="post">
     <button onclick="toggleSidebar()" id="panel-toggle">
         <img src="https://via.placeholder.com/64x64"/>
     </button>
@@ -34,11 +34,17 @@
         </h1>
 
         <div id="main-view">
+            <div id="post-container">
+
+            </div>
+
             <script>
                 let md = new Remarkable();
-                document.getElementById("main-view").insertAdjacentHTML("beforeend", md.render(<?= getMD($post) ?>));
+                document.getElementById("post-container").insertAdjacentHTML("beforeend", md.render(<?= getMD($post) ?>));
             </script>
-
+            
+            
+            
         </div>
 
 

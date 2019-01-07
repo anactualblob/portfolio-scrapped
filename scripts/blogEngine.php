@@ -62,16 +62,41 @@ function generateHTML($post) {
             break;
     }
 
-    $html ="<a href='../posts/?id=$postid' class='post-card-link'>
-                <div class='post-card'>
-                    <img class='post-card-img' src=$img />
-                    <h2 class='post-card-title'>$title</h2>
-                    <p class='post-card-category'>$category</p>
-                    <p class='post-card-desc'>$desc</p>
-                </div>
-            </a>\n";
+    switch ($post["type"]) {
+        case "blog" :
+            $html ="<div class='post-card'>
+                        <div class='post-card-img-container'>
+                            <a href='../posts/?id=$postid' class='post-card-link'>
+                                <img class='post-card-img' src=$img />
+                            </a>
+                        </div>
+                        <div class='post-card-text-container'>
+                            <a href='../posts/?id=$postid' class='post-card-link'>
+                                <h2 class='post-card-title'>$title</h2>
+                            </a>
+                            <a href='/blog/?cat=".$post["category"]."'"." class='post-card-catlink'>
+                                <p class='post-card-category'>$category</p>
+                            </a>
+                            <p class='post-card-desc'>$desc</p>
+                        </div>
+                    </div>\n";
 
-    return $html;
+            return $html;
+        
+        case "project" :
+            $html ="<a href='../posts/?id=$postid' class='post-card-link'>
+                        <div class='post-card'>
+                            <img class='post-card-img' src=$img />
+                            <div class='post-card-text'>
+                                <h2 class='post-card-title'>$title</h2>
+                            </div>
+                        </div>
+                    </a>\n";
+
+            return $html;
+    }
+
+    
 
 
 }

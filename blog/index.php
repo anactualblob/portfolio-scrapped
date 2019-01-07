@@ -26,16 +26,18 @@
         </h1>
 
         <div id="main-view">
-
-        <?php
-            include("../scripts/blogEngine.php");
-            $category = $_GET["cat"];
-            $list = getPosts($category, JSON_UNESCAPED_SLASHES);
-            
-            foreach ($list as $i) {
-                echo generateHTML($i);
-            }
-        ?>
+            <div id="posts-container">
+                <?php
+                    include("../scripts/blogEngine.php");
+                    $category = $_GET["cat"];
+                    $list = getPosts($category);//, JSON_UNESCAPED_SLASHES);
+                    
+                    foreach ($list as $i) {
+                        echo generateHTML($i);
+                    }
+                ?>   
+            </div>
+    
 
         </div>
 
