@@ -1,0 +1,20 @@
+#post-container {
+    width: 90%;
+    margin : 0px auto;
+}
+
+
+#post-container img {
+    display : block;
+    margin : 0px auto;
+    max-width : 90%;
+
+}
+
+
+
+#post-container h1 {
+    
+    margin-top : 50px;
+
+}

@@ -86,10 +86,10 @@
                         </a>
 
                         
-                        <a href="/blog/?cat=diaries">
+                        <a href="/blog/?cat=thoughts">
                             <div  class="nav-subitem">
                                 <p class="nav-subitem-text">
-                                    Play Diaries
+                                    Game Thoughts
                                 </p>
                             </div>
                         </a>

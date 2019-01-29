@@ -57,8 +57,8 @@ function generateHTML($post) {
         case "devlogs":
             $category = "Dev Log";
             break;
-        case "diaries":
-            $category = "Play Diary";
+        case "thoughts":
+            $category = "Game Thoughts";
             break;
     }
 
