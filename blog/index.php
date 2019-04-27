@@ -30,7 +30,7 @@
                 <?php
                     include("../scripts/blogEngine.php");
                     $category = $_GET["cat"];
-                    $list = getPosts($category);//, JSON_UNESCAPED_SLASHES);
+                    $list = getPosts("blog", $category);//, JSON_UNESCAPED_SLASHES);
                     
                     foreach ($list as $i) {
                         echo generateHTML($i);
@@ -40,7 +40,15 @@
     
 
         </div>
-
+        
+        <script>
+            // include this js snippet in pages where ?cat is defined
+            let cat = "<?= $_GET["cat"] ?>";
+            elems = document.querySelectorAll("#" + cat);
+            for (i=0; i<elems.length ; i++) {
+                elems[i].className += " nav-subitem-active";
+            }
+        </script>
 
     </main>
     

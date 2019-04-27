@@ -191,6 +191,7 @@ header h2 {
     background-color:  #213254;
 }
 
+
 .nav-subitem-text {
     font-size: 2vh;
     padding: 1% 0px 1% 10%;
@@ -199,7 +200,8 @@ header h2 {
     margin-top : 3px;
 }
 
-.nav-subcurrent {
+
+.nav-subitem-active {
     background-color:  #213254;
 }
 

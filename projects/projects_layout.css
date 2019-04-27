@@ -13,7 +13,7 @@
 /*MAIN BODY*/
 /***********/
 
-#posts-view {
+#main-view {
     /*flex*/
     display: flex;
     flex-direction: row;
@@ -26,16 +26,44 @@
 
 }
 
-.flexbox-test {
-    width : 320px;
-    height : 250px;
-
-    max-width : 500px;
-
+.post-card-link {
+    
     flex: 1 1 auto;
+
+    margin : 15px auto;
+}
+
+
+.post-card {
+    width : 80%;
+    height : 300px;
+
+    max-width : 400px;    
+
+    margin : 0px auto;
+
 
     border: 1px solid black;
     background : white;
+
+    overflow : hidden;
     
 }
+
+
+
+.post-card-img {
+    max-width : 100%;
+    max-height : 80%;
+}
+
+.post-card-text {
+
+}
+
+
+.post-card-title {
+
+}
+
 

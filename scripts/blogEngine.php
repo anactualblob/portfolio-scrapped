@@ -1,6 +1,6 @@
 <?php
 
-function getPosts($cat) {
+function getPosts($type, $cat) {
     
     $posts = array();
     $tempPosts = array();
@@ -18,19 +18,18 @@ function getPosts($cat) {
     
     
     // select posts according to category
-    if ( $cat == "all" ) {
-        $posts = $tempPosts;
-    }
-    else {
+    
+    foreach ($tempPosts as $post) {
 
-        foreach ($tempPosts as $post) {
-
-            if ($post["category"] == $cat) {
+        if ($post["type"] == $type) {
+            if ($cat == "all") {
+                array_push($posts, $post);
+            } else if ($post["category"] == $cat) {
                 array_push($posts, $post);
             }
         }
-
     }
+
 
     return $posts;
     
@@ -60,6 +59,15 @@ function generateHTML($post) {
         case "thoughts":
             $category = "Game Thoughts";
             break;
+        case "pers":
+            $category = "Personal";
+            break;
+        case "pro":
+            $category = "Professional";
+            break;
+        case "stud":
+            $category = "Student";
+            break;
     }
 
     switch ($post["type"]) {
@@ -71,7 +79,7 @@ function generateHTML($post) {
                             </a>
                         </div>
                         <div class='post-card-text-container'>
-                            <a href='../posts/?id=$postid' class='post-card-link'>
+                            <a href='../posts/?type=blog&cat=".$post["category"]."&id=$postid' class='post-card-link'>
                                 <h2 class='post-card-title'>$title</h2>
                             </a>
                             <a href='/blog/?cat=".$post["category"]."'"." class='post-card-catlink'>
@@ -83,8 +91,8 @@ function generateHTML($post) {
 
             return $html;
         
-        case "project" :
-            $html ="<a href='../posts/?id=$postid' class='post-card-link'>
+        case "works" :
+            $html ="<a href='../posts/?type=works&cat=".$post["category"]."&id=$postid' class='post-card-link'>
                         <div class='post-card'>
                             <img class='post-card-img' src=$img />
                             <div class='post-card-text'>

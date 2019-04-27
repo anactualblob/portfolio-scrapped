@@ -28,22 +28,25 @@
         </h1>
 
         <div id="main-view">
-            <div id="posts-view">
-                <div class="flexbox-test">1</div>
-                <div class="flexbox-test">2</div>
-                <div class="flexbox-test">3</div>
-                <div class="flexbox-test">4</div>
-                <div class="flexbox-test">5</div>
-                <div class="flexbox-test">6</div>
-                <div class="flexbox-test">7</div>
-                <div class="flexbox-test">8</div>
-                <div class="flexbox-test">9</div>
-                <div class="flexbox-test">10</div>
-                <div class="flexbox-test">11</div>
-                <div class="flexbox-test">12</div>
-                <div class="flexbox-test">13</div>
-            </div>
+            <?php
+                include("../scripts/blogEngine.php");
+                $category = $_GET["cat"];
+                $list = getPosts("works", $category);//, JSON_UNESCAPED_SLASHES);
+                
+                foreach ($list as $i) {
+                    echo generateHTML($i);
+                }
+            ?> 
         </div>
+
+        <script>
+            // include this js snippet in pages where ?cat is defined
+            let cat = "<?= $_GET["cat"] ?>";
+            elems = document.querySelectorAll("#" + cat);
+            for (i=0; i<elems.length ; i++) {
+                elems[i].className += " nav-subitem-active";
+            }
+        </script>
 
 
     </main>
